@@ -26,13 +26,13 @@
 
 (*@ type casper *)
 
-(** A program type declaration with specifications *)
 type 'a t
+(** A program type declaration with specifications *)
 (*@ model m : 'a sequence
     invariant true *)
 
-(** A program function with specifications *)
 val prog_fun : int -> int
+(** A program function with specifications *)
 (*@ y = prog_fun x
     requires true
     ensures true *)
