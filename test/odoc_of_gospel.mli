@@ -36,3 +36,8 @@ val prog_fun : int -> int
 (*@ y = prog_fun x
     requires true
     ensures true *)
+
+val multiple_gospel_attribute : int -> int
+(*@ y = multiple_gospel_attribute x *)
+(*@ requires true *)
+(*@ ensures true *)

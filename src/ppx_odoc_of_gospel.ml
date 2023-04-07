@@ -92,11 +92,9 @@ let rec signature = function
       x :: { psig_desc = Psig_attribute a'; psig_loc = loc } :: signature xs
   | x :: xs -> x :: signature xs
 
-(* XXX TODO:
-    1. get the contents of the gospel specification
-    2. merge it in the last documentation attribute if there is some
-*)
-let attributes attrs = attrs
+let attributes attrs =
+  List.filter is_gospel attrs |> List.map doc_of_gospel_specification
+  |> fun doc -> attrs @ doc
 
 let merge =
   object

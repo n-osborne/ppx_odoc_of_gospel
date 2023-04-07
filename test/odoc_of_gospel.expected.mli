@@ -14,7 +14,9 @@
 [@@@gospel
   {| function h (i : integer) : integer = i - 1 |}[@@gospel
                                                     {| requires i > 0
-    ensures result >= 0 |}]]
+    ensures result >= 0 |}]
+  [@@ocaml.doc
+    "{@gospel[\nGospel specification:\n    requires i > 0\n    ensures result >= 0 ]}"]]
 [@@@ocaml.text
   "{@gospel[\nGospel declaration:\n    function h (i : integer) : integer = i - 1 \n    requires i > 0\n    ensures result >= 0 ]}"]
 [@@@ocaml.text " A logical predicate definition "]
@@ -26,9 +28,11 @@
 [@@@ocaml.text "{@gospel[\nGospel declaration:\n    type casper ]}"]
 type 'a t[@@ocaml.doc " A program type declaration with specifications "]
 [@@gospel {| model m : 'a sequence
-    invariant true |}]
+    invariant true |}][@@ocaml.doc
+                                                           "{@gospel[\nGospel specification:\n    model m : 'a sequence\n    invariant true ]}"]
 val prog_fun : int -> int[@@ocaml.doc
                            " A program function with specifications "]
 [@@gospel {| y = prog_fun x
     requires true
-    ensures true |}]
+    ensures true |}][@@ocaml.doc
+                                                                    "{@gospel[\nGospel specification:\n    y = prog_fun x\n    requires true\n    ensures true ]}"]
