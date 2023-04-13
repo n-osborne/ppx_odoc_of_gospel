@@ -1,0 +1,5 @@
+(library
+ (package ppx_odoc_of_gospel)
+ (name my_lib)
+ (preprocess
+  (pps ppx_odoc_of_gospel -- -pp "gospel pps")))
