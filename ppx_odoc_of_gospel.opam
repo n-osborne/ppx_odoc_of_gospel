@@ -5,6 +5,8 @@ description:
   "Ppx rewriter for showing gospel specifications in documentation. It turns Gospel attributes into documentation ones."
 maintainer: ["Nicolas Osborne <nicolas.osborne@tarides.com>"]
 authors: ["Nicolas Osborne"]
+homepage: "https://github.com/n-osborne/ppx_odoc_of_gospel"
+bug-reports: "https://github.com/n-osborne/ppx_odoc_of_gospel/issues"
 depends: [
   "dune" {>= "3.0"}
   "ppxlib"
@@ -26,3 +28,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+dev-repo: "git+https://github.com/n-osborne/ppx_odoc_of_gospel.git"

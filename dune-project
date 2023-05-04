@@ -2,6 +2,8 @@
 (name ppx_odoc_of_gospel)
 (generate_opam_files true)
 
+(source (github n-osborne/ppx_odoc_of_gospel))
+
 (package
   (name ppx_odoc_of_gospel)
   (synopsis "Ppx rewriter for showing gospel specifications in documentation")
